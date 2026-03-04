@@ -1,22 +1,85 @@
-.birthday-book {
+/* styles.css - A beautiful and modern CSS design with black, gray, white, and red color scheme */
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modern Hero Section */
+.hero {
     background-color: black;
     color: white;
-}
-
-.header {
-    background-color: gray;
-    padding: 10px;
-}
-
-.button {
-    background-color: red;
-    border: none;
-    color: white;
-    padding: 10px 20px;
+    padding: 40px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Elegant Cards */
+.card {
+    background-color: gray;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: red;
+}
+
+.card-content {
+    font-size: 1em;
+    color: black;
+}
+
+/* Professional Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        margin: 10px;
+    }
 }
