@@ -1,0 +1,303 @@
+<!-- index.html
+     Deploy on GitHub Pages as a single-page “tribute + letter submission” site.
+     Works as-is with a mailto fallback. For real submissions, plug in Formspree (recommended) or a Google Form.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Celebrate Chris — In Their Words</title>
+  <meta name="description" content="Celebrate Chris with a timeless note. Add your letter, memory, or message to be included in his birthday book." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip" href="#write">Skip to the form</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="badge">In Their Words</span>
+          <span class="dot">•</span>
+          <span class="subtitle">A birthday book for Chris</span>
+        </div>
+        <div class="actions">
+          <a class="btn ghost" href="#how">How it works</a>
+          <a class="btn" href="#write">Write a note</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>Celebrate Chris<br><span class="accent">with a timeless note.</span></h1>
+          <p class="lead">
+            Chris is rowdy, selfless, hardworking — and forever a skater dude at heart.
+            This page is a simple way to collect letters, stories, and memories to print into a keepsake book.
+          </p>
+
+          <div class="hero-cards">
+            <div class="card">
+              <h3>Keep it real</h3>
+              <p>Respect-forward. Specific stories > generic compliments.</p>
+            </div>
+            <div class="card">
+              <h3>1–2 pages</h3>
+              <p>Short is great. Longer is welcome if it’s meaningful.</p>
+            </div>
+            <div class="card">
+              <h3>Private + timeless</h3>
+              <p>No public comments. This is for the printed book only.</p>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href="#write">Contribute a letter</a>
+            <a class="btn ghost" href="#prompts">Need prompts?</a>
+          </div>
+
+          <p class="fineprint">
+            Tip: If you have a photo with Chris, you can include it below (optional).
+          </p>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="poster">
+            <div class="poster-top">
+              <span class="poster-tag">TIMELINE</span>
+              <span class="poster-tag">BROTHERHOOD</span>
+              <span class="poster-tag">FAMILY</span>
+            </div>
+            <div class="poster-mid">
+              <p class="poster-quote">“A man’s legacy is what people carry forward.”</p>
+              <p class="poster-sub">Add your words. We’ll bind them into a book.</p>
+            </div>
+            <div class="poster-bottom">
+              <div class="stat">
+                <div class="stat-num">3/14</div>
+                <div class="stat-label">Birthday</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">1–2</div>
+                <div class="stat-label">Pages</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">∞</div>
+                <div class="stat-label">Respect</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="note">
+            <h3>What to write</h3>
+            <ul>
+              <li>A story that captures who he is</li>
+              <li>Something you respect about his character</li>
+              <li>A moment he showed up for you</li>
+              <li>Something you hope he remembers</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="how" class="section">
+      <div class="wrap">
+        <h2>How this works</h2>
+        <div class="grid3">
+          <div class="panel">
+            <h3>1) Write</h3>
+            <p>Drop a letter, memory, or message below. Keep it honest and specific.</p>
+          </div>
+          <div class="panel">
+            <h3>2) Collect</h3>
+            <p>All entries are gathered privately by Kayla and formatted into a book.</p>
+          </div>
+          <div class="panel">
+            <h3>3) Print</h3>
+            <p>The final book becomes a keepsake he can revisit whenever he needs it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prompts" class="section alt">
+      <div class="wrap">
+        <h2>Meaningful prompts (pick any)</h2>
+        <div class="grid2">
+          <div class="panel">
+            <h3>Stories hit harder than praise</h3>
+            <ul class="bullets">
+              <li>“A moment I saw your character clearly was…”</li>
+              <li>“You probably don’t realize it, but you changed ____ when you…”</li>
+              <li>“The thing I respect most about you is ____ because…”</li>
+              <li>“If someone asked me what kind of man you are, I’d say…”</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>For family / long-time friends</h3>
+            <ul class="bullets">
+              <li>“From the early days to now, what’s stayed true about you is…”</li>
+              <li>“When things got hard, you handled it by…”</li>
+              <li>“A funny ‘classic Chris’ moment I’ll never forget is…”</li>
+              <li>“What I hope you never doubt about yourself is…”</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fineprint">
+          Optional: end with a simple line like “Proud of you.” or “Still standing with you.”
+        </p>
+      </div>
+    </section>
+
+    <section id="write" class="section">
+      <div class="wrap">
+        <h2>Write your note for Chris</h2>
+        <p class="lead">
+          Aim for 1–2 pages (roughly 300–900 words). Short is welcome. Longer is welcome if it stays meaningful.
+        </p>
+
+        <!-- Option A (RECOMMENDED): Formspree
+             1) Create a free Formspree form and replace the action URL below with your endpoint:
+                https://formspree.io/f/xxxxabcd
+             2) In Formspree settings, enable file uploads if you want photo upload.
+        -->
+        <form class="form" id="letterForm" method="POST" action="MAILTO_FALLBACK_OR_FORMSPREE_ENDPOINT" enctype="multipart/form-data">
+          <div class="row">
+            <label>
+              Your name
+              <input name="name" autocomplete="name" required placeholder="e.g., Manual" />
+            </label>
+
+            <label>
+              Relationship to Chris
+              <input name="relationship" required placeholder="e.g., Best friend / Sister / Daughter" />
+            </label>
+          </div>
+
+          <label>
+            Your email (optional, for follow-up if needed)
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+
+          <label>
+            Your letter
+            <textarea name="letter" id="letter" required placeholder="Write your letter here..."></textarea>
+            <div class="meta">
+              <span id="count">0</span> words
+              <span class="dot">•</span>
+              Suggested range: 300–900
+            </div>
+          </label>
+
+          <label class="file">
+            Optional photo with Chris (jpg/png)
+            <input name="photo" type="file" accept="image/png,image/jpeg" />
+            <span class="hint">If file uploads aren’t enabled on your form provider, you can skip this.</span>
+          </label>
+
+          <label class="file">
+            Optional handwritten signature image (jpg/png)
+            <input name="signature" type="file" accept="image/png,image/jpeg" />
+            <span class="hint">You can also just type your name and Kayla can add a signature later.</span>
+          </label>
+
+          <div class="check">
+            <input id="consent" name="consent" type="checkbox" required />
+            <label for="consent">
+              I’m okay with my letter being printed in a private birthday book for Chris.
+            </label>
+          </div>
+
+          <div class="submitRow">
+            <button class="btn" type="submit">Submit letter</button>
+            <a class="btn ghost" id="mailtoFallback" href="#" role="button">Or email it instead</a>
+          </div>
+
+          <p class="fineprint">
+            Privacy note: This is not a public page. Submissions go only to Kayla for printing.
+          </p>
+        </form>
+
+        <div class="panel small">
+          <h3>If the form doesn’t work</h3>
+          <p>
+            Use the “email it instead” button and paste your letter into the email body.
+            (GitHub Pages can’t store submissions by itself — you need Formspree, Google Forms, or email.)
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="badge">In Their Words</span>
+          <span class="dot">•</span>
+          <span class="subtitle">For Chris</span>
+        </div>
+        <p class="fineprint">Built for a private, respectful keepsake. Not a public guestbook.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#how">How it works</a>
+        <a href="#prompts">Prompts</a>
+        <a href="#write">Write a note</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Word count + mailto fallback
+    (function () {
+      const ta = document.getElementById('letter');
+      const count = document.getElementById('count');
+      const mailto = document.getElementById('mailtoFallback');
+
+      const TO_EMAIL = "YOUR_EMAIL_HERE@example.com"; // <-- replace with your email
+      const SUBJECT = "Letter for Chris — In Their Words";
+
+      function wc(text) {
+        return (text || "")
+          .trim()
+          .split(/\s+/)
+          .filter(Boolean)
+          .length;
+      }
+
+      function update() {
+        const words = wc(ta.value);
+        count.textContent = String(words);
+
+        const name = document.querySelector('input[name="name"]').value || "Someone";
+        const rel = document.querySelector('input[name="relationship"]').value || "Friend/Family";
+        const body =
+`Name: ${name}
+Relationship: ${rel}
+
+LETTER:
+${ta.value}
+
+(If you have a photo/signature, attach it to this email.)`;
+
+        mailto.href = `mailto:${encodeURIComponent(TO_EMAIL)}?subject=${encodeURIComponent(SUBJECT)}&body=${encodeURIComponent(body)}`;
+      }
+
+      ['input', 'change', 'keyup'].forEach(evt => {
+        document.addEventListener(evt, (e) => {
+          if (e.target && (e.target.matches('#letter') || e.target.matches('input[name="name"]') || e.target.matches('input[name="relationship"]'))) {
+            update();
+          }
+        }, true);
+      });
+
+      update();
+    })();
+  </script>
+</body>
+</html>
