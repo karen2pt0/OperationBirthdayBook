@@ -309,59 +309,85 @@
       </div>
     </section>
 
-    <!-- FORM -->
-    <section id="form" class="section">
-      <div class="wrap narrow">
-        <h2 class="section__title">Write your note</h2>
-        <p class="section__sub">
-          This goes directly to Kayla and is used only for the printed birthday book.
-        </p>
+ <!-- FORM -->
+<section id="form" class="section">
+  <div class="wrap narrow">
+    <h2 class="section__title">Write your note</h2>
+    <p class="section__sub">
+      This goes directly to Kayla and is used only for the printed birthday book.
+    </p>
 
-        <form class="cardForm" action="https://formspree.io/f/xwvnglga" method="POST">
-          <div class="grid">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" autocomplete="name" required />
-            </div>
+    <!-- CORRECT FORMSPREE FORM -->
+    <form class="cardForm" action="https://formspree.io/f/xojvpqkb" method="POST">
 
-            <div class="field">
-              <label for="relationship">Relationship to Chris</label>
-              <input id="relationship" name="relationship" placeholder="Friend, family, coworker…" required />
-            </div>
+      <!-- email subject -->
+      <input type="hidden" name="_subject" value="New Letter for Chris">
 
-            <div class="field full">
-              <label for="email">Email <span class="muted">(optional)</span></label>
-              <input id="email" name="email" type="email" autocomplete="email" />
-            </div>
+      <div class="grid">
 
-            <div class="field full">
-              <label for="letter">Your letter</label>
-              <textarea
-                id="letter"
-                name="letter"
-                rows="12"
-                placeholder="Write like you’re talking to him."
-                required
-              ></textarea>
-              <div class="help">Tip: one story + one thing you respect + one line you hope he remembers.</div>
-            </div>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required />
+        </div>
 
-            <div class="field full checkbox">
-              <label class="check">
-                <input type="checkbox" name="consent" value="yes" required />
-                <span>I’m okay with my letter being printed in a private birthday book for Chris.</span>
-              </label>
-            </div>
+        <div class="field">
+          <label for="relationship">Relationship to Chris</label>
+          <input id="relationship" name="relationship" placeholder="Friend, family, coworker…" required />
+        </div>
 
-            <div class="field full actions">
-              <button class="btn btn--primary" type="submit">Submit</button>
+        <div class="field full">
+          <label for="email">Email <span class="muted">(optional)</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" />
+        </div>
 
-              <a class="btn" href="mailto:kaylacollins3@icloud.com?subject=Letter%20for%20Chris%20%E2%80%94%20In%20Their%20Words&body=Name:%0ARelationship:%0A%0ALETTER:%0A">
-                Email instead
-              </a>
-            </div>
+        <div class="field full">
+          <label for="letter">Your letter</label>
+          <textarea
+            id="letter"
+            name="letter"
+            rows="12"
+            placeholder="Write like you’re talking to him."
+            required
+          ></textarea>
+          <div class="help">
+            Tip: one story + one thing you respect + one line you hope he remembers.
           </div>
-        </form>
+        </div>
+
+        <div class="field full checkbox">
+          <label class="check">
+            <input type="checkbox" name="consent" value="yes" required />
+            <span>I’m okay with my letter being printed in a private birthday book for Chris.</span>
+          </label>
+        </div>
+
+        <div class="field full actions">
+          <button class="btn btn--primary" type="submit">Submit</button>
+
+          <a class="btn"
+             href="mailto:kaylacollins3@icloud.com?subject=Letter for Chris — In Their Words">
+            Email instead
+          </a>
+        </div>
+
+      </div>
+    </form>
+
+    <p class="micro center topGap">
+      Photos or handwritten signatures can be emailed to
+      <strong>kaylacollins3@icloud.com</strong> and will be added to the book.
+    </p>
+
+    <footer class="footer">
+      <div class="footer__line">In Their Words • For Chris</div>
+      <div class="footer__sub">Private collection. Printed keepsake. No public comments.</div>
+    </footer>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
 
         <p class="micro center topGap">
           Photos/signatures: email Kayla a photo with Chris and/or a photo of your handwritten signature at
