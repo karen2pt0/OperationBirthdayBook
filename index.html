@@ -1,40 +1,174 @@
-<!-- index.html
-     Deploy on GitHub Pages as a single-page “tribute + letter submission” site.
-     Works as-is with a mailto fallback. For real submissions, plug in Formspree (recommended) or a Google Form.
--->
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Celebrate Chris — In Their Words</title>
-  <meta name="description" content="Celebrate Chris with a timeless note. Add your letter, memory, or message to be included in his birthday book." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chris — In Their Words</title>
+  <meta name="description" content="A private collection of letters for Chris, printed into a keepsake book." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,550;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <a class="skip" href="#write">Skip to the form</a>
+  <a class="skip" href="#form">Skip to the form</a>
 
-  <header class="hero">
-    <div class="wrap">
-      <nav class="topbar">
-        <div class="brand">
-          <span class="badge">In Their Words</span>
-          <span class="dot">•</span>
-          <span class="subtitle">A birthday book for Chris</span>
-        </div>
-        <div class="actions">
-          <a class="btn ghost" href="#how">How it works</a>
-          <a class="btn" href="#write">Write a note</a>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <span class="brand-title">In Their Words</span>
+          <span class="brand-subtitle">for Chris</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#how">The Process</a>
+        <a href="#prompts">Prompts</a>
+        <a class="nav-cta" href="#form">Contribute</a>
       </nav>
+    </div>
+  </header>
 
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <h1>Celebrate Chris<br><span class="accent">with a timeless note.</span></h1>
-          <p class="lead">
-            Chris is rowdy, selfless, hardworking — and forever a skater dude at heart.
-            This page is a simple way to collect letters, stories, and memories to print into a keepsake book.
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <img src="chris.jpeg" alt="Chris" class="chris-photo" />
+
+        <p class="eyebrow">Private • Printed • Kept</p>
+
+        <h1>Chris</h1>
+
+        <p class="tagline">Rowdy. Loyal. Shows up when it counts.</p>
+
+        <p class="lead">
+          For his birthday, we’re collecting letters, stories, and memories to print into a keepsake book.
+          Keep it real. A specific moment beats a long speech.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#form">Write a note</a>
+          <a class="button ghost" href="#prompts">Need a prompt?</a>
+        </div>
+
+        <p class="micro">
+          Aim for <strong>1–2 pages</strong>. Short is welcome. Honest is better than perfect.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container narrow">
+        <h2>The Process</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card-num">1</div>
+            <h3>Write</h3>
+            <p>A letter, a memory, a moment. Keep it specific.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">2</div>
+            <h3>Collect</h3>
+            <p>Submissions go privately to Kayla for formatting.</p>
+          </article>
+          <article class="card">
+            <div class="card-num">3</div>
+            <h3>Print</h3>
+            <p>Everything becomes a bound book he can keep.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="prompts">
+      <div class="container narrow">
+        <h2>Prompts</h2>
+        <p class="subhead">Pick one. Or ignore this and just write.</p>
+
+        <div class="prompt-grid">
+          <div class="prompt">“A moment I saw your character clearly was…”</div>
+          <div class="prompt">“You probably don’t realize it, but you changed ____ when you…”</div>
+          <div class="prompt">“The thing I respect most about you is…”</div>
+          <div class="prompt">“If someone asked me what kind of man you are, I’d say…”</div>
+          <div class="prompt wide">“A funny ‘classic Chris’ moment I’ll never forget is…”</div>
+          <div class="prompt wide">“What I hope you never doubt about yourself is…”</div>
+        </div>
+
+        <p class="micro center">
+          Optional closer: “Proud of you.” / “Still standing with you.”
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="form">
+      <div class="container narrow">
+        <h2>Write your note</h2>
+        <p class="subhead">This goes directly to Kayla and is used only for the printed birthday book.</p>
+
+        <form class="form" action="https://formspree.io/f/xwvnglga" method="POST" enctype="multipart/form-data">
+          <div class="grid">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="relationship">Relationship to Chris</label>
+              <input id="relationship" name="relationship" placeholder="Friend, family, coworker…" required />
+            </div>
+
+            <div class="field full">
+              <label for="email">Your email <span class="muted">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" />
+            </div>
+
+            <div class="field full">
+              <label for="letter">Your letter</label>
+              <textarea id="letter" name="letter" rows="12" placeholder="Write like you’re talking to him." required></textarea>
+              <div class="help">Tip: one story + one thing you respect + one line you hope he remembers.</div>
+            </div>
+
+            <div class="field">
+              <label for="photo">Optional photo <span class="muted">(jpg/png)</span></label>
+              <input id="photo" name="photo" type="file" accept="image/png,image/jpeg" />
+            </div>
+
+            <div class="field">
+              <label for="signature">Optional signature image <span class="muted">(jpg/png)</span></label>
+              <input id="signature" name="signature" type="file" accept="image/png,image/jpeg" />
+            </div>
+
+            <div class="field full checkbox">
+              <label class="check">
+                <input type="checkbox" name="consent" value="yes" required />
+                <span>I’m okay with my letter being printed in a private birthday book for Chris.</span>
+              </label>
+            </div>
+
+            <div class="field full actions">
+              <button class="button primary" type="submit">Submit</button>
+
+              <a class="button ghost"
+                 href="mailto:kaylacollins3@icloud.com?subject=Letter%20for%20Chris%20%E2%80%94%20In%20Their%20Words&body=Name%3A%20%0ARelationship%3A%20%0A%0ALETTER%3A%0A%0A(If%20you%20have%20a%20photo%2Fsignature%2C%20attach%20it%20to%20this%20email.)">
+                Email instead
+              </a>
+            </div>
+          </div>
+        </form>
+
+        <footer class="mini-footer">
+          <div class="fine">
+            In Their Words • For Chris — private collection, printed keepsake.
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>            This page is a simple way to collect letters, stories, and memories to print into a keepsake book.
           </p>
 
           <div class="hero-cards">
