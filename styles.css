@@ -216,3 +216,15 @@ font-family:Fraunces, serif;
 font-size:13px;
 color:#777;
 }
+.memoryGrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:16px;
+}
+
+.memoryGrid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:8px;
+}
