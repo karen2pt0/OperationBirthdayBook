@@ -1,40 +1,234 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Chris — In Their Words</title>
-  <meta name="description" content="A private collection of letters for Chris, printed into a keepsake book." />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,550;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Chris — In Their Words</title>
+<meta name="description" content="A private collection of letters for Chris, printed into a keepsake book.">
 
-  <link rel="stylesheet" href="styles.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <a class="skip" href="#form">Skip to form</a>
 
-  <header class="header">
-    <div class="wrap header__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__mark" aria-hidden="true"></span>
-        <span class="brand__text">
-          <span class="brand__title">In Their Words</span>
-          <span class="brand__sub">for Chris</span>
-        </span>
-      </a>
+<header class="header">
+<div class="wrap headerInner">
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#how">The Process</a>
-        <a href="#prompts">Prompts</a>
-        <a class="nav__cta" href="#form">Contribute</a>
-      </nav>
-    </div>
-  </header>
+<div class="brand">
+<div class="brandMark"></div>
+<div>
+<div class="brandTitle">In Their Words</div>
+<div class="brandSub">for Chris</div>
+</div>
+</div>
 
+<nav class="nav">
+<a href="#how">Process</a>
+<a href="#prompts">Prompts</a>
+<a href="#form" class="navBtn">Write</a>
+</nav>
+
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="wrap narrow heroInner">
+
+<img src="chris.jpeg" class="heroPhoto" alt="Chris">
+
+<p class="pill">Private • Printed • Kept</p>
+
+<h1 class="heroTitle">Chris</h1>
+
+<p class="heroTagline">
+Rowdy. Loyal. Shows up when it counts.
+</p>
+
+<p class="heroLead">
+For his birthday we're collecting letters and stories to turn into a keepsake book.
+One real moment is better than a long speech.
+</p>
+
+<div class="heroButtons">
+<a class="btnPrimary" href="#form">Write a note</a>
+<a class="btnGhost" href="#prompts">Use a prompt</a>
+</div>
+
+<p class="heroMicro">
+1–2 pages is perfect. Honest matters more than polished.
+</p>
+
+</div>
+
+</section>
+
+<!-- MEMORY STRIP -->
+
+<section class="memory">
+
+<div class="wrap narrow">
+
+<h2 class="sectionTitle">A Few Moments</h2>
+
+<div class="memoryGrid">
+<img src="memory1.jpg" alt="">
+<img src="memory2.jpg" alt="">
+<img src="memory3.jpg" alt="">
+<img src="memory4.jpg" alt="">
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="how" class="section">
+
+<div class="wrap narrow">
+
+<h2 class="sectionTitle">The Process</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="stepNum">1</div>
+<h3>Write</h3>
+<p>A letter, memory, or moment.</p>
+</div>
+
+<div class="step">
+<div class="stepNum">2</div>
+<h3>Collect</h3>
+<p>Kayla gathers and formats submissions.</p>
+</div>
+
+<div class="step">
+<div class="stepNum">3</div>
+<h3>Print</h3>
+<p>The final letters become a book.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROMPTS -->
+
+<section id="prompts" class="section alt">
+
+<div class="wrap narrow">
+
+<h2 class="sectionTitle">Prompts</h2>
+
+<div class="promptGrid">
+
+<div class="prompt">A moment I saw your character clearly was…</div>
+
+<div class="prompt">You probably don't realize it but you changed ____ when you…</div>
+
+<div class="prompt">The thing I respect most about you is…</div>
+
+<div class="prompt">If someone asked what kind of man you are I would say…</div>
+
+<div class="prompt wide">A classic Chris moment I’ll never forget is…</div>
+
+<div class="prompt wide">What I hope you never doubt about yourself is…</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<section id="form" class="section">
+
+<div class="wrap narrow">
+
+<h2 class="sectionTitle">Write your note</h2>
+
+<form class="cardForm" action="https://formspree.io/f/xojvpqkb" method="POST">
+
+<input type="hidden" name="_subject" value="New Letter for Chris">
+
+<div class="grid">
+
+<div class="field">
+<label>Name</label>
+<input type="text" name="name" required>
+</div>
+
+<div class="field">
+<label>Relationship</label>
+<input type="text" name="relationship" required>
+</div>
+
+<div class="field full">
+<label>Email (optional)</label>
+<input type="email" name="email">
+</div>
+
+<div class="field full">
+<label>Your Letter</label>
+<textarea name="letter" rows="10" required></textarea>
+</div>
+
+<div class="field full checkbox">
+<label>
+<input type="checkbox" required>
+Okay to include in printed birthday book
+</label>
+</div>
+
+<div class="field full">
+<button class="btnPrimary" type="submit">Submit Letter</button>
+</div>
+
+</div>
+
+</form>
+
+<p class="micro">
+Photos or handwritten signatures can be emailed to
+<strong>kaylacollins3@icloud.com</strong>
+</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footerLine">
+In Their Words • For Chris
+</div>
+
+<div class="footerSub">
+Private collection. Printed keepsake.
+</div>
+
+</footer>
+
+</main>
+
+</body>
+</html>
   <main id="top">
     <!-- HERO -->
     <section class="hero">
